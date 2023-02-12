@@ -1,0 +1,36 @@
+.row-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.row-info p {
+  align-self: center;
+}
+
+.row-info p::after {
+  content: "/ person";
+  display: block;
+  color: var(--grayish-cyan);
+  font-size: .8rem;
+}
+
+.bill-amount {
+  line-height: 1;
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+button {
+  color: var(--very-dark-cyan);
+  background: var(--primary);
+  border: none;
+  text-transform: uppercase;
+  padding: 6px;
+}
+button:hover {
+  background: var(--whitened-cyan);
+}
+button:disabled {
+  background: #0C686D;
+}

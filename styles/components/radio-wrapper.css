@@ -1,0 +1,55 @@
+#radio-wrapper {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media screen and (max-width: 800px) {
+  #radio-wrapper {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+}
+
+
+#radio-wrapper input[type="radio"] {
+  display: none;
+}
+
+:not(input).button {
+  background: var(--very-dark-cyan);
+  color: white;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  /* Friendly cursor */
+  cursor: pointer;
+  user-select: none;
+}
+
+input.button {
+  width: 100%;
+}
+
+/* Hover button */
+:not(input).button:hover {
+  /* background: var(--whitened-cyan); */
+}
+
+/* Checked button */
+input[type="radio"]:checked + label :not(input).button {
+  background: var(--primary);
+  color: var(--very-dark-cyan);
+}
+
+/* Checked custom input */
+.input-wrapper:not(.error) input[type="radio"]:checked + label input.button {
+  border-color: var(--primary);
+}
+
+/* Don't show error when is not selected */
+input[type="radio"]:not(:checked) + label input.button {
+  border-color: transparent;
+  color: var(--dark-grayish-cyan);
+}

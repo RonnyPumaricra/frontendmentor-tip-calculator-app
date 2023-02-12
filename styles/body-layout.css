@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: var(--light-grayish-cyan);
+}
+
+.app-wrapper {
+  flex: 1;
+
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:  80px;
+}
+
+.tip-calculator {
+
+  align-self: stretch;
+  width: 100%;
+  max-width: 845px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+
+  background: var(--white);
+  border-radius: 24px;
+}
+
+.form-wrapper {
+  padding: 3px;
+}
+
+.summary-wrapper {
+  background: var(--very-dark-cyan);
+  color: var(--white);
+
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px;
+}
+
+button, input, .button {
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.button {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .app-wrapper {
+    gap: 40px;
+  }
+
+  .logo {
+    margin-top: 40px;
+  }
+
+  .tip-calculator {
+    max-width: 450px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

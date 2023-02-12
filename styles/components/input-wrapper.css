@@ -1,0 +1,59 @@
+.input-wrapper {
+  display: block;
+}
+
+.input-wrapper:not(:first-child) {
+  margin-top: 36px;
+}
+
+.input-wrapper p {
+  color: var(--dark-grayish-cyan);
+}
+
+.input-wrapper .helper {
+  position: relative;
+}
+
+.input-wrapper .icon {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  height: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+input[type="text"] {
+  --ghost-color: var(--very-light-grayish-cyan);
+  display: block;
+  width: 100%;
+
+  color: var(--very-dark-cyan);
+  background: var(--ghost-color);
+  padding: 8px;
+  border: 2px solid transparent;
+
+  text-align: right;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.error input[type="text"] {
+  border-color: #DF7155;
+}
+.error .helper::before {
+  color: #DF7155;
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+}
+.error.not-positive .helper::before {
+  content: "Must be positive";
+}
+.error.nan-number .helper::before {
+  content: "Must be a number";
+}

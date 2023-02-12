@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="styles/index.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script type="module" src="scripts/index.js"></script>
+</head>
+<body>
+  <div class="app-wrapper">
+    <img class="logo" src="images/logo.svg" alt="">
+    <form class="tip-calculator" autocomplete="off">
+      <div class="form-wrapper">
+        <label class="input-wrapper">
+          <p>Bill</p>
+          <div class="helper">
+            <img src="images/icon-dollar.svg" alt="" class="icon">
+            <input type="text" id="bill" placeholder="0">
+          </div>
+        </label>
+        <div class="input-wrapper">
+          <p>Select tip %</p>
+          <div id="radio-wrapper">
+          </div>
+        </div>
+        <label class="input-wrapper">
+          <p>Number of people</p>
+          <div class="helper">
+            <img class="icon" src="images/icon-person.svg" alt="">
+            <input type="text" id="num-of-people" placeholder="0">
+          </div>
+        </label>
+
+      </div>
+      <div class="summary-wrapper">
+        <div class="rows-wrapper">
+          <div class="row-info">
+            <p>Tip Amount</p>
+            <div class="bill-amount" id="tip-amount">0.00</div>
+          </div>
+          <div class="row-info">
+            <p>Total</p>
+            <div class="bill-amount" id="total-amount">0.00</div>
+          </div>
+        </div>
+          <button disabled>Reset</button>
+      </div>
+    </form>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/RonnyPumaricra">Ronny Pumaricra</a>.
+  </div>
+</body>
+</html>
